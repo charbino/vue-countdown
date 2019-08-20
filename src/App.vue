@@ -16,21 +16,19 @@
         data() {
             return {
                 dateBegin: "2020-09-11 06:00:00",
-                title: "#Perou2020",
+                title: "#Pérou2020",
             }
         },
     }
 </script>
 
-<style>
+<style lang="scss">
     @import "../src/assets/font/trip.css";
 
     .app-trip {
         align-items: center;
         bottom: 0;
         background-color: #34495e;
-        /*display: flex;*/
-        /*justify-content: center;*/
         left: 0;
         position: absolute;
         right: 0;
@@ -45,7 +43,10 @@
     .block {
         display: flex;
         flex-direction: column;
-        margin: 20px;
+        margin: 30px;
+        @media all and (max-width: 599px) and (min-width: 50px) {
+            margin: 10px;
+        }
     }
 
     .text {
@@ -56,6 +57,9 @@
         margin-top: 10px;
         margin-bottom: 10px;
         text-align: center;
+        @media all and (max-width: 599px) and (min-width: 50px) {
+            font-size: 15px;
+        }
     }
 
     .digit {
@@ -65,15 +69,24 @@
         font-family: 'Roboto', serif;
         margin: 10px;
         text-align: center;
+        @media all and (max-width: 599px) and (min-width: 50px) {
+            font-size: 45px;
+            margin: 5px;
+        }
     }
 
     .title {
         color: #ecf0f1;
-        font-size: 140px;
+        font-size: 5em;
         font-weight: 100;
         font-family: 'Roboto', serif;
         margin: 50px;
         text-align: center;
+        @media all and (max-width: 599px) and (min-width: 50px) {
+            margin: 30px;
+            margin-top: 50px;
+            font-size: 3.5em;
+        }
     }
 
 </style>
